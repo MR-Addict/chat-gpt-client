@@ -1,7 +1,6 @@
+import style from "./Chat.module.css";
 import ChatInput from "./ChatInput/ChatInput";
 import ChatWindow from "./ChatWindow/ChatWindow";
-
-import style from "./Chat.module.css";
 
 export default function Chat() {
   return (

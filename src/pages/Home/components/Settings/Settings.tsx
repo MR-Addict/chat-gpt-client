@@ -3,11 +3,10 @@ import { AiOutlineClear } from "react-icons/ai";
 import { IoChatbubbleEllipsesOutline } from "react-icons/io5";
 
 import style from "./Settings.module.css";
-import { useChatContext } from "../ChatProvider/ChatProvider";
+import { useChatContext, regenerateResponse, resetMessages } from "../../ChatProvider";
 
 export default function Settings() {
-  const { regenerateResponse, options, apiToken, setApiToken, setOptions, resetMessages, chatgptStatus } =
-    useChatContext();
+  const { options, apiToken, setAndStoreApiToken, setOptions, chatgptStatus } = useChatContext();
 
   return (
     <div className={style.window}>
@@ -78,13 +77,13 @@ export default function Settings() {
             <label htmlFor='apiToken'>API Token</label>
             <input
               required
-              type='password'
+              type='text'
               id='apiToken'
               autoComplete='off'
               maxLength={100}
-              value={apiToken}
+              value={"*".repeat(apiToken.length)}
               className={style.input}
-              onChange={(e) => setApiToken(e.target.value)}
+              onChange={(e) => setAndStoreApiToken(e.target.value)}
             />
           </div>
         </div>

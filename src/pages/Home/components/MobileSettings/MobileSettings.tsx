@@ -5,11 +5,11 @@ import { AiOutlineClear } from "react-icons/ai";
 import Settings from "../Settings/Settings";
 import style from "./MobileSettings.module.css";
 import { useClickOutside } from "@/hooks";
-import { useChatContext } from "../ChatProvider/ChatProvider";
+import { useChatContext, resetMessages } from "../../ChatProvider";
 
 export default function MobileSettings() {
   const settingsRef = useRef<HTMLElement>(null);
-  const { resetMessages, chatgptStatus } = useChatContext();
+  const { chatgptStatus } = useChatContext();
   const [openSettings, setOpenSettings] = useState(false);
 
   useClickOutside(settingsRef, () => setOpenSettings(false));
