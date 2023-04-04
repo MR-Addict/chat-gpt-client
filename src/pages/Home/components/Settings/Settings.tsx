@@ -3,10 +3,11 @@ import { AiOutlineClear } from "react-icons/ai";
 import { IoChatbubbleEllipsesOutline } from "react-icons/io5";
 
 import style from "./Settings.module.css";
-import { useChatContext, regenerateResponse, resetMessages } from "../../ChatProvider";
+import { useChatContext } from "../ChatProvider/ChatProvider";
 
 export default function Settings() {
-  const { options, apiToken, setAndStoreApiToken, setOptions, chatgptStatus } = useChatContext();
+  const { options, apiToken, setAndStoreApiToken, regenerateResponse, setOptions, chatgptStatus, resetMessages } =
+    useChatContext();
 
   return (
     <div className={style.window}>

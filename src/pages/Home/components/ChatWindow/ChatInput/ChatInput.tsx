@@ -4,12 +4,12 @@ import { MdSend } from "react-icons/md";
 import style from "./ChatInput.module.css";
 import { MessageType } from "@/types/chatgpt";
 import { usePopupContext } from "@/contexts";
-import { useChatContext, generateResponse } from "../../../ChatProvider";
+import { useChatContext } from "../../ChatProvider/ChatProvider";
 
 export default function ChatInput() {
   const { popup } = usePopupContext();
   const [userInput, setUserInput] = useState("");
-  const { apiToken, messages, setMessages, chatgptStatus } = useChatContext();
+  const { apiToken, messages, generateResponse, setMessages, chatgptStatus } = useChatContext();
 
   function handleInput(e: React.ChangeEvent<HTMLTextAreaElement>) {
     setUserInput(e.target.value);
