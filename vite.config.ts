@@ -2,12 +2,15 @@ import path from "path";
 import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
 
-const isGithubAction = process.env.GITHUB_ACTION;
-const githubPagesLink = "https://github.com/" + process.env.GITHUB_REPOSITORY;
-const baseUrl = isGithubAction ? githubPagesLink : "./";
+function getBaseUrl() {
+  if (!process.env.GITHUB_ACTION) return "/";
+
+  const [githubOwner, repository] = process.env.GITHUB_REPOSITORY.split("/");
+  return `https://${githubOwner}.github.io/${repository}`;
+}
 
 export default defineConfig({
-  base: baseUrl,
+  base: getBaseUrl(),
   plugins: [react()],
   resolve: { alias: [{ find: "@", replacement: path.resolve(__dirname, "src") }] },
 });

@@ -23,7 +23,7 @@ jobs:
       - run: npm install
       - run: npm run build
 
-      - name: Push public to github pages
+      - name: Deploy to github pages
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
           target_branch: gh-pages
