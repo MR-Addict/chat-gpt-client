@@ -1,25 +1,16 @@
-/* chat part */
-.window {
-  @apply flex-1 flex flex-col justify-between gap-1 overflow-hidden p-2 md:p-5;
-}
-
-.frame {
-  @apply w-full h-full overflow-auto px-2;
-}
-
-/* message */
-.messages {
-  @apply w-full flex flex-col gap-3;
-}
-
 /* form */
 .form {
   @apply w-full flex flex-col items-center justify-center gap-3;
 }
 
+.input-wrapper {
+  box-shadow: 0 0 5px #b9b9b9;
+  @apply w-full py-2.5 pl-4 pr-10 border border-gray-400 rounded-md;
+}
+
 .input {
   max-height: 240px;
-  @apply w-full outline-none resize-none pr-7;
+  @apply w-full outline-none resize-none;
 }
 
 .form button {
@@ -43,19 +34,16 @@
 }
 
 /* scroll bar */
-.input::-webkit-scrollbar,
-.chatwindowframe::-webkit-scrollbar {
+.input::-webkit-scrollbar {
   width: 0.3em;
   height: 0.3rem;
 }
 
-.input::-webkit-scrollbar-thumb,
-.chatwindowframe::-webkit-scrollbar-thumb {
+.input::-webkit-scrollbar-thumb {
   background-color: #d9d9db;
   border-radius: 0.2rem;
 }
 
-.input::-webkit-scrollbar-corner,
-.chatwindowframe::-webkit-scrollbar-corner {
+.input::-webkit-scrollbar-corner {
   display: none;
 }

@@ -1,0 +1,23 @@
+.frame {
+  @apply w-full h-full overflow-auto px-2;
+}
+
+/* message */
+.messages {
+  @apply w-full flex flex-col gap-3;
+}
+
+/* scroll bar */
+.frame::-webkit-scrollbar {
+  width: 0.3em;
+  height: 0.3rem;
+}
+
+.frame::-webkit-scrollbar-thumb {
+  background-color: #d9d9db;
+  border-radius: 0.2rem;
+}
+
+.frame::-webkit-scrollbar-corner {
+  display: none;
+}

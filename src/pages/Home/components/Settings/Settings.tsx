@@ -10,11 +10,11 @@ export default function Settings() {
     useChatContext();
 
   return (
-    <div className='w-full h-full flex flex-col justify-between text-white gap-4 bg-slate-700 px-3 py-4'>
+    <div className={style.window}>
       <div className='flex flex-col gap-1'>
         <h1 className={style.title}>Settings</h1>
 
-        <div className='p-2 border border-gray-500 rounded-md flex flex-col gap-2'>
+        <div className='p-3 border border-gray-500 rounded-md flex flex-col gap-2'>
           <div className={style.inputelement}>
             <label htmlFor='model'>Model</label>
             <select
@@ -78,8 +78,9 @@ export default function Settings() {
             <label htmlFor='apiToken'>API Token</label>
             <input
               required
-              type='text'
+              type='password'
               id='apiToken'
+              autoComplete='off'
               maxLength={100}
               value={apiToken}
               className={style.input}

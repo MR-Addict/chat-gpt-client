@@ -1,5 +1,3 @@
-"use client";
-
 import classNames from "classnames";
 import { BsCheckCircle } from "react-icons/bs";
 import { MdErrorOutline } from "react-icons/md";
