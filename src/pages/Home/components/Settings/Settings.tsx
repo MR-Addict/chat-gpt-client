@@ -3,6 +3,7 @@ import { AiOutlineClear } from "react-icons/ai";
 import { IoChatbubbleEllipsesOutline } from "react-icons/io5";
 
 import style from "./Settings.module.css";
+import { Footer } from "@/components";
 import { useChatContext } from "../ChatProvider/ChatProvider";
 
 export default function Settings() {
@@ -116,6 +117,8 @@ export default function Settings() {
             <span>Clear prompts</span>
           </button>
         </div>
+
+        <Footer />
       </div>
     </div>
   );
