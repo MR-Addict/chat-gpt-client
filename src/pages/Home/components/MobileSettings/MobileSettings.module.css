@@ -1,5 +1,5 @@
 .window {
-  @apply md:hidden w-full border-b border-b-gray-300 text-gray-700 rounded-t-md py-3 px-4 flex flex-row justify-between items-center relative;
+  @apply w-full border-b border-b-gray-300 text-gray-700 rounded-t-md py-3 px-4 flex flex-row justify-between items-center relative;
 }
 
 /* hamburger */

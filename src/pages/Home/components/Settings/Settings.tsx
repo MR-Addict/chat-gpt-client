@@ -4,9 +4,11 @@ import { IoChatbubbleEllipsesOutline } from "react-icons/io5";
 
 import style from "./Settings.module.css";
 import { Footer } from "@/components";
+import { useWindowSize } from "@/hooks";
 import { useChatContext } from "../ChatProvider/ChatProvider";
 
 export default function Settings() {
+  const smallScreen = useWindowSize().width < 1024;
   const { options, apiToken, setAndStoreApiToken, regenerateResponse, setOptions, chatgptStatus, resetMessages } =
     useChatContext();
 
@@ -118,7 +120,7 @@ export default function Settings() {
           </button>
         </div>
 
-        <Footer />
+        {!smallScreen && <Footer />}
       </div>
     </div>
   );

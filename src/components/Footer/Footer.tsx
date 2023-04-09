@@ -2,7 +2,7 @@ import { AiFillGithub } from "react-icons/ai";
 
 export default function Footer() {
   return (
-    <footer className='text-gray-500 flex flex-row items-center gap-1 text-xs mt-1'>
+    <footer className='text-gray-500 flex flex-row items-center gap-1 text-sm mt-1'>
       <span>Copyright &copy; {new Date().getFullYear()} MR-Addict</span>
       <a
         target='_blank'
