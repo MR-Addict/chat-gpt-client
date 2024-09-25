@@ -29,5 +29,4 @@ npm run preview
 
 ## 3. Available Links
 
-- [https://chatgpt.mraddict.vercel.app](https://chatgpt.mraddict.vercel.app)
 - [https://mr-addict.github.io/chat-gpt-client](https://mr-addict.github.io/chat-gpt-client)
